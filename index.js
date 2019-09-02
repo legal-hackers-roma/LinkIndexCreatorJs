@@ -19,7 +19,7 @@ let template = Handlebars.compile(doc)
 
 async function main() {
     try {
-        const searchPath = checkArgv()
+        const { searchPath, avvocato } = checkArgv()
         const result = await asyncReaddir(searchPath)
         const files = loopResults(result, searchPath)
         const permittedFiles = checkPermittedFiles(files)
@@ -28,7 +28,7 @@ async function main() {
 
         /* Handlebars compilation */
 
-        const context = { avvocato: 'Roberto Alma', data: parseDateIntoStringLocaleIT(new Date()), items: entries }
+        const context = { avvocato: avvocato, data: parseDateIntoStringLocaleIT(new Date()), items: entries }
         const compiledTemplate = template(context)
         const outputPath = path.join(searchPath, '00_Indice.pdf')
         const outputPathHtml = path.join(searchPath, '00_Indice.html')

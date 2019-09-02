@@ -2,6 +2,7 @@ const fs = require('fs')
 
 function checkArgv() {
     const searchPath = process.argv[2]
+    const avvocato = process.argv[3]
 
     /* look for folder's path. If path is not provided the script will return an error */
     if (!searchPath) {
@@ -17,7 +18,15 @@ function checkArgv() {
         }
     }
 
-    return searchPath
+    if(!avvocato){
+        console.log('Necessario fornire il nome dell\' Avvocato')
+        return process.exit(1)
+    }
+
+    return {
+        searchPath: searchPath,
+        avvocato: avvocato
+    }
 }
 
 module.exports.checkArgv = checkArgv
