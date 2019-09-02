@@ -1,0 +1,16 @@
+{
+  "name": "linkindexcreatorjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Avv. Roberto Alma",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.1.2",
+    "html-pdf": "^2.2.0"
+  }
+}
