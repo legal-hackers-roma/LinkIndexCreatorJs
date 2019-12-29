@@ -10,7 +10,7 @@
   "author": "Avv. Roberto Alma",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "html-pdf": "^2.2.0",
     "phantom-html-to-pdf": "^0.6.0"
   }
